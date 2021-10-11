@@ -1,0 +1,14 @@
+divideArrayList
+    Create ArrayList to hold all first names
+    Create ArrayList to hold all last names
+    Create ArrayList to hold all salaries
+
+    Create a String array which will hold all split strings from the full lines
+
+    for each line in the input list
+        add the first partition to the last name ArrayList
+        add the second partition to the first name ArrayList
+        add the third partition to the salary ArrayList
+
+    Call a function that prints all of the values in a neat table, it will take it from there
+

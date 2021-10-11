@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class "App" as App{
+    __Methods__
+    +Main()
+    -getSiteName()
+    -getAuthorName()
+    -askJS()
+    -askCSS()
+    __Variables__
+    ..Main..
+    siteName : String
+    authorName : String
+    JS : boolean
+    CSS : boolean
+    newSite : website
+    ..getSiteName..
+    siteName : String
+    input : Scanner
+    ..getAuthorName..
+    author : String
+    input : Scanner
+    ..askJS..
+    choice : String
+    returnVal : boolean
+    input : Scanner
+    ..askCS..
+    choice : String
+    returnVal : boolean
+    input : boolean
+    __Attributes__
+    Receives site data from the user
+    Pushes site data to createFiles
+}
+class "createFiles" as createFiles{
+    __Methods__
+    +createWebFiles()
+    __Variables__
+    filename : String
+    rootFile : File
+    newHTML : File
+    HTMLContents : String
+    fw : fileWriter
+    jsFile : File
+    cssFile : File
+    __Attributes__
+    Takes user input data and creates files and directories accordingly
+}
+object "website" as website{
+    __Methods__
+    ..Simple Getter Methods..
+    +getSiteName()
+    +getAuthor()
+    +getJS()
+    +getCSS()
+    __Variables__
+    -siteName : String
+    -author : String
+    -JS : boolean
+    -CSS : boolean
+    __Attributes__
+    Object used to hold website data throughout the package
+}
+
+note left of website: Object used in both classes
+website -- App
+website -- createFiles
+App -right-> createFiles : Receives user input data and sends
+@enduml

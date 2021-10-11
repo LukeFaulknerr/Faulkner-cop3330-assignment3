@@ -1,0 +1,14 @@
+printArrayList
+
+    Try to create a file to write to
+        Create an output file to print to
+        Print how many names are in the ArrayList
+        Print a divider
+
+        For each index in the ArrayList
+            Print the string at the index to the output file
+
+        Close the output file
+
+    If there is an error in creating the output file
+        return to main, do not deal with it

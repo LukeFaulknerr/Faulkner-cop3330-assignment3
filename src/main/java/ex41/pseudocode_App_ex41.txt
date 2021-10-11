@@ -1,0 +1,11 @@
+Main
+    Create file variable to read from
+    Create scanner to read file
+
+    Create ArrayList to hold names
+    Fill out ArrayList with names from file using createArrayList
+
+    Sort ArrayList
+
+    Print sorted ArrayList into an output file
+

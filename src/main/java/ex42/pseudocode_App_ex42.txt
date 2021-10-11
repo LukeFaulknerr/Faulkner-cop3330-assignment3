@@ -1,0 +1,6 @@
+Main
+    Create a file variable to read the input file
+    Create a scanner to read in from the input file
+    Create an ArrayList to hold all of the inputs, they will be split later
+    Fill out the ArrayList using the createNameArray function from exercise 41
+    Call a String divider function which will take it from there

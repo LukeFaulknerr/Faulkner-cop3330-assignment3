@@ -1,0 +1,48 @@
+@startuml ex41 Model
+
+skinparam style strictum1
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 16
+skinparam DefaultFontStyle bold
+skinparam ArrowThickness 2.2
+skinparam ArrowColor #red
+hide empty members
+
+class "App" as App {
+    __Classes__
+    +Main()
+    __Variables__
+    nameInput : File ("exercise41_input.txt")
+    nameScanner : Scanner
+    nameList : ArrayList<String>
+    __Attributes__
+    Opens Input File
+    Calls createNameArray class to return a name list from the input data
+    Sorts name list
+    Calls the createOutFileAndPrint class to print the organized array into an output file
+}
+class "createNameArray" as createNameArray {
+    __Classes__
+    +createArrayList()
+    __Variables__
+    currentName : String
+    newNameList : ArrayList<String>
+    __Attributes__
+    Creates an ArrayList from a given input file
+    Returns the ArrayList to the main function
+}
+class "createOutFileAndPrint" as createOutFileAndPrint {
+    __Classes__
+    +printArrayList(ArrayList<String> sortedNameList)
+    __Variables__
+    outfile : BufferedWriter ("exercise41_output.txt")
+    __Attributes__
+    Creates an output file to print data to
+    Prints the amount of names in the list followed by a divider
+    Prints the full list to the output file
+}
+
+App -> createNameArray : Gives nameInput and nameScanner variables for reading
+createNameArray --> App : Creates Name List via nameInput and nameScanner and returns it as newNameList
+createOutFileAndPrint <-- App : Sends organized Array to be printed
+@enduml

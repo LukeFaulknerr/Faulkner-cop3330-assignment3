@@ -1,0 +1,12 @@
+Create a website object with elements
+    Website Name - String
+    Author Name - String
+    JS Choice - Boolean
+    CSS Choice - Boolean
+
+Create a constructor for this website object
+
+Create a getter function for website name
+Create a getter function for Author name
+Create a getter function for JS choice
+Create a getter function for CSS choice

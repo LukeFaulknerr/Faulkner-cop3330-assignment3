@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+skinparam style strictum1
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 16
+skinparam DefaultFontStyle bold
+skinparam ArrowThickness 2.2
+skinparam ArrowColor #red
+hide empty members
+
+class "App" as App {
+    __Methods__
+    +Main()
+    __Variables__
+    nameInput : File ("src/main/java/ex42/exercise42_input.txt")
+    nameScanner : Scanner
+    fullList : ArrayList<String>
+    __Attributes__
+    Creates a file object to accept input from a file
+    Calls createNameArray from Ex 41 to create an ArrayList from the input file
+    Calls divideArrayList to split the single ArrayList into three separate ArrayLists
+}
+class "divideArrayList" as divideArrayList {
+    __Program Methods__
+    +divideArrayList(ArrayList<String> fullList)
+    ..Test Methods..
+    +returnFNameList(ArrayList<String> fullList)
+    +returnLNameList(ArrayList<String> fullList)
+    +returnSalaryList(ArrayList<String> fullList)
+    ==Variables==
+    __divideArrayList__
+    fNameList : ArrayList<String>
+    lNameList : ArrayList<String>
+    salaryList : ArrayList<String>
+    split : String[]
+    __returnFNameList__
+    fNameList : ArrayList<String>
+    split : String[]
+    __returnLNameList__
+    lNameList : ArrayList<String>
+    split : String[]
+    __returnSalaryList__
+    salaryList : ArrayList<String>
+    split : string[]
+    ==Attributes==
+    Divides the taken ArrayList into three separate String ArrayLists for first name, last name, and salary
+    Calls printNewArrays to print all three arrays in a tabular format
+}
+class "printNewArrays" as printNewArrays {
+    __Program Methods__
+    +printNewArrays(ArrayList<String> fNameList, ArrayList<String> lNameList, ArrayList<String> salaryList)
+    +tabAmount(String ex)
+    ==Variables==
+    __tabAmount__
+    amount : int
+    ==Attributes==
+    Prints the three given lists in a tabular format, with colums for first name, last name, and salary
+}
+
+App --> divideArrayList : Send initial data from read in file
+divideArrayList --> printNewArrays : Take new split arrays and print them in tabular format
+
+@enduml

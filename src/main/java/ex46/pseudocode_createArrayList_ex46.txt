@@ -1,0 +1,12 @@
+extractData
+    Create tools to parse through the input file
+    Create a String to hold the current string
+    Create a boolean to hold whether the string is already in the ArrayList
+    While there are still lines to parse
+        Split the line into an array of Strings
+        For each String in this array
+            Add the first name with a frequency of one to the ArrayList
+            In each iteration after,
+                If the name is already in the ArrayList, increase its freq by 1
+                If not, add the name with a frequency of one
+    return the ArrayList

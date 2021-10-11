@@ -1,0 +1,7 @@
+outputSearchedItem
+    Print the product's information
+
+failedSearch
+    Print the sorry statement
+    Create variables for input and ask for the next search input
+    Call back to the search function using the new search target

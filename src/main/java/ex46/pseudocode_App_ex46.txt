@@ -1,0 +1,5 @@
+Main
+    Create file to read from
+    Create an ArrayList of objects that hold each animal's name and frequency
+    Call a function to fill the arraylist with data from the file
+    Call a function to organize and print the arraylist

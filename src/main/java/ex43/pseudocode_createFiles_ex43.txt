@@ -1,0 +1,25 @@
+createWebFiles
+    Create a variable that holds the path of the desired website directory
+    Create a File object with that root directory
+    Try to create a directory, and if that works,
+        Print that the directory was created
+
+    Append the directory path variable with the path of the html file
+    Create a File object for the HTML object with the new path variable
+    Try to create the HTML file, and if that works
+        Print that the file was created
+
+    Create a string with the desired HTML data
+    Create a file writer that writes to the path of the html file
+    Have the file writer append the desired HTML data variable to the html file
+    Close the file writer
+
+    Check if the user wants a JavaScript folder. If they do,
+        Rewrite the directory path variable to include the path of the new folder
+        Try to create a File object at the directory path variable, and if that works,
+            Print that the directory was created
+
+    Check if the user wants a CSS folder. If they do,
+            Rewrite the directory path variable to include the path of the new folder
+            Try to create a File object at the directory path variable, and if that works,
+                Print that the directory was created

@@ -1,0 +1,63 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class "App" as App{
+    __Methods__
+    +Main()
+    __Variables__
+    inputFile : File ("src/main/java/ex46/exercise46_input.txt")
+    freq : ArrayList<wordFreq>
+    __Attributes__
+    Selects the input file
+    Calls another class to create an ArrayList based on the file;
+    calls another class to organize and print the ArrayList as a histogram
+}
+class "createArrayList" as createArrayList{
+    __Methods__
+    +extractData()
+    __Variables__
+    freq : ArrayList<wordFreq>
+    inputScanner : BufferedWriter
+    line : String[]
+    current : String
+    flag : boolean
+    w : wordFreq
+    __Attributes__
+    Creates an ArrayList based on the input data
+}
+class "organizeArrayList" as organizeArrayList {
+    __Methods__
+    +organize()
+    +printArrayList()
+    +tabAmount()
+    __Attributes__
+    Organizes a given ArrayList in terms of the highest frequency
+    Prints given ArrayList as a formatted histogram
+    Finds the amount of tabs to evenly start the histogram
+}
+
+object "wordFreq" as wordFreq{
+    __Methods__
+    ..Simple Getter Methods..
+    +getName()
+    +getFreq()
+    ..Simple Setter Methods..
+    +setName()
+    +setFreq()
+    __Variables__
+    -name : String
+    -freq : int
+}
+
+note left of wordFreq : Object used in all classes
+wordFreq -down- App
+wordFreq -down- createArrayList
+wordFreq -down- organizeArrayList
+App -left-> createArrayList : Sends File that ArrayList will be created off of
+createArrayList -right-> App : gives back created ArrayList
+App -right-> organizeArrayList : gives ArrayList to be organized and printed
+
+
+
+
+@enduml

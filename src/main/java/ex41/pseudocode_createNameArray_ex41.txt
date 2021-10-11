@@ -1,0 +1,9 @@
+createArrayList
+    Create a String to hold each name
+    Create a new ArrayList that will be returned to create the ArrayList in main
+
+    While there is a next line to add
+        Assign the String of the current line to the String Variable
+        Add said string to the ArrayList
+
+    Return the ArrayList

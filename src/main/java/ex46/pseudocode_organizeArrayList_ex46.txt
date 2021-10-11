@@ -1,0 +1,9 @@
+organizeArrayList
+    Sort the ArrayList by highest frequency
+    Call a function to print the arraylist
+
+printArrayList
+    For each animal, print their name and frequency as a set of *
+
+tabAmount
+    Give the amount fo tabs needed to evenly space each * to start at the same point

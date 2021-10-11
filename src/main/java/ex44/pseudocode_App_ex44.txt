@@ -1,0 +1,18 @@
+Main
+    Create a String to hold input data for the desired item and a Scanner
+    Prompt the user for input and Accept user input
+    Send input to a searching method
+
+findDesiredItem
+    Create Strings to hold each set's name, price, and quantity
+    Create a JSON Parser to go through the JSON file
+    Create an object that holds the current pair
+    Start parsing the JSON file at the correct place
+    For each pair in the given array,
+        While there are still remaining pairs
+            Create an object that sets at the next object and a String that holds its key
+            Check for what type of key is found and assign the corresponding variable to the key
+            Check if there is a product name to compare with your searched item
+                Check if they match
+                    If they do, call a successful output and finish the program
+    If it has iterated through the entire list and not found the desired item, call a failure function

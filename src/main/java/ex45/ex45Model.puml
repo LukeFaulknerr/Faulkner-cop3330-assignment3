@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class "App" as App{
+    __Methods__
+    +Main()
+    __Variables / Objects__
+    inputFile : File
+    line : String[]
+    inputScanner : Scanner
+    outputBW : bufferedWriter
+    search : String
+    __Attributes__
+    Searches an input file for instances of the word "utilize" and replaces it with "use"
+}
+class "outputWriter" as outputWriter {
+    __Methods__
+    +output(BufferedWriter bw, String s)
+    __Attributes__
+    Prints the given string to an output file with a space after it
+}
+
+App --> outputWriter : Sends desired String to be printed to an output file
+@enduml

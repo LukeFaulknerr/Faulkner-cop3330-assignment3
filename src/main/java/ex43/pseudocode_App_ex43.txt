@@ -1,0 +1,42 @@
+Main
+    Strings for the author and website title
+    Booleans for if folders for JavaScript and/or CSS folders are to be made
+    Assign website title variable an input value
+    Assign the author name variable an input value
+    Assign the JavaScript boolean t/f
+    Assign the CSS boolean t/f
+    Create a website object using assigned variables
+
+    Make the files (call external function)
+
+getSiteName
+    Create a variable for the website name
+    Create a scanner for user input
+    Print a prompt to tell the user to give the website title
+    Accept input
+    return input
+
+getAuthorName
+    Create a variable for the author name
+    Create a scanner for user input
+    Print a prompt to tell the user to give the author
+    Accept input
+    return input
+
+askJS
+    Create a variable for the JavaScript folder option as a string
+    Create a variable that holds the boolean value for the choice
+    Create a scanner for user input
+    Print a prompt to tell the user to give the choice for a JavaScript folder
+    Accept input
+    Convert string to boolean
+    return boolean value
+
+askCSS
+    Create a variable for the CSS folder option as a string
+    Create a variable that holds the boolean value for the choice
+    Create a scanner for user input
+    Print a prompt to tell the user to give the choice for a CSS folder
+    Accept input
+    Convert string to boolean
+    return boolean value

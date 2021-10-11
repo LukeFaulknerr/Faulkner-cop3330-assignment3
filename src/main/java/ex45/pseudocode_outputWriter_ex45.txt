@@ -1,0 +1,2 @@
+output
+    Print each string into an output file

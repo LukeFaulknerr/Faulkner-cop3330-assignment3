@@ -1,0 +1,14 @@
+wordFreq (Object)
+    Contains a name as a String and a frequency as an int
+
+getName
+    return the object's name
+
+getFreq
+    return the object's frequency
+
+setName
+    set the object's name to the provided String input
+
+setFreq
+    set the object's frequency to the given input

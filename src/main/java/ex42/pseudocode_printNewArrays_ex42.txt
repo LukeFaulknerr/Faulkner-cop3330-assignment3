@@ -1,0 +1,14 @@
+printNewArrays
+    Print table header
+    Print divider between header and data
+
+    for each set of inputs
+        print each last name
+        print the necessary number of tabs to straighten each column out
+        print each last name
+        print the necessary number of tabs to straighten each column out
+        print each salary
+
+tabAmount
+    create an integer that holds the necessary amount of tabs
+    return said integer

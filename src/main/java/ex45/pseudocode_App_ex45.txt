@@ -1,0 +1,9 @@
+Main
+    Create File reading and writing  tools
+    Create a string to hold the current word
+    While there are more lines to parse,
+        Separate each line into an array of Strings
+        For every string in that array
+            Check if the word "utilize" is used and replace it with "use"
+        Print a new line and start on parsing the next line
+    Close the output file

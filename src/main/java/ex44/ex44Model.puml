@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class "App" as App{
+    __Methods__
+    +Main()
+    +findDesiredItem()
+    __Variables__
+    ..Main..
+    searchProduct : String
+    input : Scanner
+    ..findDesiredItem..
+    productName : String
+    price : String
+    quantity : String
+    key : String
+    obj : Object
+    productList : JSONObject
+    ja : JSONArray
+    itr1 : Iterator<Map.Entry>
+    __Attributes__
+    Asks for the desired item the first time
+    Searches the JSON file to see if the desired item is in stock
+}
+class "outputInfo" as outputInfo{
+    __Methods__
+    +outputSearchedItem()
+    +failedSearch()
+    __Variables__
+    ..failedSearch..
+    searchProduct : string
+    input : Scanner
+    __Attributes__
+    Outputs the data of the desired item if the item is found
+    Outputs an apology message and restarts the process if the desired item is not found
+}
+
+App --> outputInfo : Item is found, calls outputSearchedItem()
+App -right-> outputInfo : Item is not found, calls failedSearch()
+outputInfo --> App : After new item is entered, findDesiredItem() is called
+@enduml
